@@ -6,6 +6,7 @@
 //Breve Descripcion: implementa un Sack utilizando la clase Vector
 //*******************************************************************
 
+import java.lang.Integer()
 
 public class PostfixProcessing{
 	Stack<int> myStack = new StackVector<int>();
@@ -26,7 +27,7 @@ public class PostfixProcessing{
 			myStack.push(myStack.pop()/temp);
 			break;
 		default:
-			myStack.push((int) car);
+			myStack.push(Integer.parseInt(car));
 			break;
 	}
 	
