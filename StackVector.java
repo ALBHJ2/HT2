@@ -1,5 +1,5 @@
 //*******************************************************************
-//Autores: Diego Rosales y
+//Autores: Diego Rosales y Bernardo Fuentes
 //Seccion: 20
 //
 //Nobmbe de Archivo: StackVector.java
