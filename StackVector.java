@@ -30,7 +30,7 @@ public class StackVector<E> implements Stack<E>{
 	
 	public boolean empty(){
 		if (data.isEmpty()){
-			return ;
+			return true;
 		}
 		else{
 			return false;

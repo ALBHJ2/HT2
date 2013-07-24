@@ -6,30 +6,36 @@
 //Breve Descripcion: implementa un Sack utilizando la clase Vector
 //*******************************************************************
 
-import java.lang.Integer()
+import java.util.Scanner;
+import java.io.File;
+import java.lang.Integer;
 
 public class PostfixProcessing{
-	Stack<int> myStack = new StackVector<int>();
-	String car= "";
 	
-	switch (car){
-		case "+":
-			myStack.push(myStack.pop()+myStack.pop());
-			break;
-		case "-":
-			myStack.push(myStack.pop()-myStack.pop());
-			break;
-		case "*":
-			myStack.push(myStack.pop()*myStack.pop());
-			break;
-		case "/":
-			int temp =myStack.pop();
-			myStack.push(myStack.pop()/temp);
-			break;
-		default:
-			myStack.push(Integer.parseInt(car));
-			break;
+	public static void main(String args[]){
+	
+		Scanner scan = new Scanner(new File("datos.txt"));
+		Stack<String> myStack = new StackVector<String>();
+		String car= "3";
+		
+		switch (car){
+			case "+":
+				myStack.push(Integer.toString(Integer.parseInt(myStack.pop())+Integer.parseInt(myStack.pop())));
+				break;
+			case "-":
+				myStack.push(Integer.toString(Integer.parseInt(myStack.pop())-Integer.parseInt(myStack.pop())));
+				break;
+			case "*":
+				myStack.push(Integer.toString(Integer.parseInt(myStack.pop())*Integer.parseInt(myStack.pop())));
+				break;
+			case "/":
+				int temp =Integer.parseInt(myStack.pop());
+				myStack.push(Integer.toString(Integer.parseInt(myStack.pop())/temp));
+				break;
+			default:
+				myStack.push(car);
+				break;
+		}
 	}
-	
 	
 }
